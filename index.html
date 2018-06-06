@@ -1,11 +1,23 @@
-<!doctype HTML>
-<html>
-<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
-<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
-  <body style='margin : 0px; overflow: hidden;'>
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
+    <title>AR.js Sample</title>
+  </head>
+  <body style='margin: 0px; overflow: hidden;'>
     <a-scene embedded arjs>
+      <a-assets>
+        <!-- <aoasset-item id="hamburger" src="models/Hamburger.gltf"></aoasset-item> -->
+        <a-asset-item id="hamburger" src="models/model.gltf"></a-asset-item>
+      </a-assets>
     <a-marker preset="hiro">
-            <a-box position='0 0.5 0' material='color: black;'></a-box>
+      <a-box position='0 0.5 0' material='color: black;'></a-box>
+<!--       <a-entity gltf-model="#hamburger" play-all-model-animations="" position="0 0 0" ratation="0 0 0" scale="0.0025 0.001 0.001" visible="true">
+        <a-animation attribute="ratation" repeat="indefinite" direction="alternate" dur="500" from="0 0 0" to="10 0 0"></a-animation></a-entity>-->
+
+      <!-- <a-entity gltf-model="#hamburger" scale="0.5 0.5 0.5" position="0 0 0" rotation="0 180 0"></a-entity> -->
     </a-marker>
     <a-entity camera></a-entity>
     </a-scene>
